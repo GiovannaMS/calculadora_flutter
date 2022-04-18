@@ -30,6 +30,7 @@ dependencies:
   flutter:
     sdk: flutter
   auto_size_text: ^2.1.0 #ajusta o tamanho do texto no display automaticamente
+  http:
 
 
   # The following adds the Cupertino Icons font to your application.
