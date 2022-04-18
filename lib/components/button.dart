@@ -11,23 +11,27 @@ class Button extends StatelessWidget {
   final String text; //espera receber uma string
   final bool big; //para botões maiores
   final Color color;
+  final void Function(String) cb; //callback dos botões
 
   Button({
     required this.text, //recebe um text por parâmetro
     this.big = false, //false por padrão
     this.color = DEFAULT,
+    required this.cb,
   });
 
   Button.big({
   required this.text, //recebe um text por parâmetro
   this.big = true, //true por padrão
   this.color = DEFAULT,
+  required this.cb,
   });
 
   Button.operation({
   required this.text, //recebe um text por parâmetro
   this.big = false, //false por padrão
   this.color = OPERATION,
+  required this.cb,
   });
 
   @override
@@ -44,7 +48,7 @@ class Button extends StatelessWidget {
             fontWeight: FontWeight.w200,
           ),
         ), //um child do tipo texto com o text recebido por parâmetro
-        onPressed: () {},
+        onPressed: () => cb(text),
       ),
     );
   }
