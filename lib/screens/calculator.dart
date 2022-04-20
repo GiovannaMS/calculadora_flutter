@@ -21,6 +21,7 @@ class _CalculadoraState extends State<Calculadora> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       home: Column(
         children: <Widget>[
           Display(memory.value), //mostra sempre o valor mais atual da memória
